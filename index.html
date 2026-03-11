@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+
+    <title>Countries</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+      };
+    </script>
+  </head>
+
+  <body class="bg-[#F4F6F8] dark:bg-[#202C36]">
+    <header
+      class="bg-white dark:bg-[#2B3844] border-b border-[#E5E7EB] dark:border-0 flex justify-between items-center text-[#111827] dark:text-white max-sm:px-5 max-[400px]:px-2 px-10 py-5"
+    >
+      <p class="font-semibold max-sm:text-xl text-2xl max-[400px]:text-[16px]">
+        Where in the world?
+      </p>
+
+      <button
+        id="modeBtn"
+        class="cursor-pointer bg-[#F3F4F6] text-[#111827] py-3 px-5 rounded-md hover:bg-[#E5E7EB] dark:bg-[#2B3844] dark:text-white transition-all duration-300 max-[400px]:text-[14px]"
+      >
+        Dark mode
+      </button>
+    </header>
+
+    <section>
+      <div
+        class="bg-white dark:bg-[#2B3844] border-2 border-solid border-[#D1D5DB] dark:border-0 flex items-center max-[700px]:m-auto max-[700px]:mt-10 w-fit text-[#111827] dark:text-white rounded-md mt-10 ml-10 max-[500px]:pl-3 pl-6"
+      >
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+        <input
+          id="srchInp"
+          class="outline-none placeholder:text-[#9CA3AF] bg-transparent max-[500px]:pr-12 pl-6 max-sm:pl-2 py-4 pr-36"
+          type="text"
+          placeholder="Search for a country"
+        />
+      </div>
+
+      <div id="divBox" class="flex gap-16 flex-wrap justify-center my-12"></div>
+    </section>
+
+    <script src="main.js"></script>
+  </body>
+</html>
